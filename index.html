@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Emulator</title>
+</head>
+<body>
+  <h1>Load Your Game</h1>
+  
+  <label for="rom">ROM URL:</label>
+  <input type="text" id="rom" placeholder="Enter ROM URL"><br><br>
 
+  <label for="core">Select Core:</label>
+  <select id="core">
+    <option value="n64">Nintendo 64</option>
+    <option value="gba">Game Boy Advance</option>
+    <option value="nes">NES</option>
+  </select><br><br>
+
+  <button onclick="loadGame()">Load Game</button>
+
+  <div id="emulator"></div>
+
+  <script>
+    function loadGame() {
+      const romUrl = document.getElementById("rom").value;
+      const core = document.getElementById("core").value;
+      alert("Would load " + romUrl + " with core " + core);
+    }
+  </script>
+</body>
+</html>
